@@ -4,11 +4,11 @@
   padding: 0;
   font-family: "Bricolage Grotesque", sans-serif;
 }
+
+/* Navbar Section CSS */
 .navbar {
   background-color: transparent;
-  display: flex;
-  height: 70px;
-
+  transition: background-color 0.3s ease;
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
@@ -23,7 +23,7 @@
   justify-content: space-between;
   z-index: 1;
   width: 100%;
-  max-width: 1300px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 50px;
 }
@@ -39,11 +39,64 @@
 }
 
 .navbar-links {
-  color: rgb(9, 144, 99);
+  color: rgb(0, 0, 0);
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
   padding: 0 1rem;
   height: 100%;
+}
+
+.navbar-links:hover {
+  text-decoration: underline;
+}
+
+.white-links {
+  color: rgb(236, 235, 235) !important;
+}
+
+#navbar-logo {
+  display: flex;
+  align-items: center;
+}
+#navbar-logo img {
+  width: 100px;
+  height: auto;
+}
+
+/* Hero Section CSS */
+
+.main {
+  background-position: center;
+  background-repeat: no-repeat;
+  height: auto;
+  background-size: cover;
+}
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  background-image: url(/images/homepage.jpg);
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100vh;
+  max-height: auto;
+  margin: 0;
+  top: -100px;
+}
+
+.main-content {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: rgb(236, 235, 235);
+}
+.main-content h1 {
+  font-size: 110px;
+  color: rgb(236, 235, 235);
 }
