@@ -3,7 +3,7 @@ window.addEventListener("scroll", function () {
   var navbarLinks = document.querySelectorAll(".navbar-links");
 
   if (window.scrollY > 0) {
-    navbar.style.backgroundColor = "black";
+    navbar.style.backgroundColor = "Gray";
     navbarLinks.forEach((link) => link.classList.add("white-links"));
   } else {
     navbar.style.backgroundColor = "transparent";

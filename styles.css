@@ -39,13 +39,14 @@
 }
 
 .navbar-links {
-  color: rgb(0, 0, 0);
+  color: rgb(236, 235, 235);
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
   padding: 0 1rem;
   height: 100%;
+  text-shadow: 0px 0px 10px rgba(0.5, 0.5, 0.5, 0.5);
 }
 
 .navbar-links:hover {
@@ -99,4 +100,9 @@
 .main-content h1 {
   font-size: 110px;
   color: rgb(236, 235, 235);
+  text-shadow: 0px 0px 10px rgba(0.8, 0.8, 0.8, 0.8);
+}
+
+.main-content h2 {
+  text-shadow: 0px 0px 10px rgba(1, 1, 1, 1);
 }
