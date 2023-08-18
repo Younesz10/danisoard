@@ -8,7 +8,8 @@
 /* Navbar Section CSS */
 .navbar {
   background-color: transparent;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.15s ease;
+  opacity: 85%;
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
@@ -39,14 +40,14 @@
 }
 
 .navbar-links {
-  color: rgb(236, 235, 235);
+  color: rgb(255, 255, 255);
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
   padding: 0 1rem;
   height: 100%;
-  text-shadow: 0px 0px 10px rgba(0.5, 0.5, 0.5, 0.5);
+  text-shadow: 1px 1px 1px rgba(0.5, 0.5, 0.5, 0.5);
 }
 
 .navbar-links:hover {
@@ -54,7 +55,7 @@
 }
 
 .white-links {
-  color: rgb(236, 235, 235) !important;
+  color: rgb(255, 255, 255) !important;
 }
 
 #navbar-logo {
@@ -91,20 +92,21 @@
 }
 
 .main-content {
+  margin-top: 180px;
   display: grid;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: rgb(236, 235, 235);
+  color: rgb(255, 255, 255);
 }
 .main-content h1 {
   font-size: 110px;
-  color: rgb(236, 235, 235);
-  text-shadow: 0px 0px 10px rgba(0.8, 0.8, 0.8, 0.8);
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 1px 1px rgba(0.5, 0.5, 0.5, 0.5);
 }
 
 .main-content h2 {
-  text-shadow: 0px 0px 10px rgba(1, 1, 1, 1);
+  text-shadow: 2px 1px 1px rgba(0.5, 0.5, 0.5, 0.5);
 }
 
 .scroll-button {
@@ -112,10 +114,11 @@
   align-items: center;
   text-align: center;
   text-decoration: none;
-  color: rgb(236, 235, 235);
-  text-shadow: 0px 0px 10px rgba(0.8, 0.8, 0.8, 0.8);
+  color: rgb(254, 254, 254);
+  text-shadow: 1px 1px 1px rgba(0.5, 0.5, 0.5, 0.5);
   font-size: 50px;
   transition: transform 0.3s ease;
+  margin-top: 180px;
 }
 
 .scroll-button:hover {
