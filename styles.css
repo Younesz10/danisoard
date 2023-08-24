@@ -9,14 +9,13 @@
 .navbar {
   background-color: transparent;
   transition: background-color 0.15s ease;
-  opacity: 85%;
+  opacity: 80%;
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
   position: sticky;
-  top: 0;
+  top: 5px;
   z-index: 999;
-  /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); */
 }
 
 .navbar-container {
@@ -74,6 +73,7 @@
   background-repeat: no-repeat;
   height: auto;
   background-size: cover;
+  margin-bottom: 0;
 }
 .main-container {
   display: flex;
@@ -125,6 +125,44 @@
   transform: translateY(5px);
 }
 
+/* About section */
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+
+.about p {
+  margin-top: 0;
+  width: 630px;
+  font-size: 18px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.profile img {
+  width: 200px;
+  border-radius: 100px;
+  margin-right: 50px;
+  box-shadow: 0 0px 8px 2px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+  cursor: pointer;
+}
+.profile img:hover {
+  width: 205px;
+  transition: 0.5s;
+}
+
+/* Nature Section */
+
+.nature {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 80px;
+}
 /* Footer section */
 
 footer {
