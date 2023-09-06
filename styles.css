@@ -157,10 +157,24 @@
 
 /* Services */
 
-.services {
+.services-grid {
+  grid-template-columns: 1fr 1fr 1fr;
   display: grid;
+  column-gap: 8px;
+  row-gap: 25px;
+  padding: 100px;
   align-items: center;
   align-content: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 50px;
+  background-color: rgb(195, 195, 195);
+}
+
+.services-info {
+  align-items: center;
+  align-content: center;
+  justify-content: center;
 }
 
 /* Nature Section */
@@ -175,8 +189,7 @@
 
 footer {
   padding: 20px;
-  background-color: rgb(128, 128, 128);
-  color: white;
+  background-color: rgb(195, 195, 195);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -209,7 +222,7 @@ footer {
 }
 
 .fa-instagram {
-  color: white;
+  color: black;
 }
 
 /* Add a hover effect if you want */
