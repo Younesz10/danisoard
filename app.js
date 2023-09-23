@@ -1,15 +1,19 @@
-// window.addEventListener("scroll", function () {
-//   var navbar = document.querySelector(".navbar");
-//   var navbarLinks = document.querySelectorAll(".navbar-links");
+const menu = document.querySelector("#mobile-menu");
+const menulinks = document.querySelector(".navbar-menu");
 
-//   if (window.scrollY > 0) {
-//     navbar.style.backgroundColor = "Gray";
-//     navbarLinks.forEach((link) => link.classList.add("white-links"));
-//   } else {
-//     navbar.style.backgroundColor = "transparent";
-//     navbarLinks.forEach((link) => link.classList.remove("white-links"));
-//   }
-// });
+menu.addEventListener("click", function () {
+  menu.classList.toggle("is-active");
+  menulinks.classList.toggle("active");
+});
+// Close menu when any menu option is selected
+const menuOptions = document.querySelectorAll(".navbar-menu li a");
+
+menuOptions.forEach(function (option) {
+  option.addEventListener("click", function () {
+    menu.classList.remove("is-active");
+    menulinks.classList.remove("active");
+  });
+});
 
 document.addEventListener("DOMContentLoaded", function () {
   const scrollButton = document.querySelector(".scroll-button");

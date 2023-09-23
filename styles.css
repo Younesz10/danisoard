@@ -9,7 +9,6 @@
 .navbar {
   background-color: transparent;
   transition: background-color 0.15s ease;
-  opacity: 80%;
   justify-content: space-between;
   width: 100%;
   align-items: center;
@@ -67,6 +66,95 @@
   height: auto;
 }
 
+@media screen and (max-width: 960px) {
+  #navbar-logo {
+    display: flex;
+    cursor: pointer;
+    width: 20px;
+    height: 35px;
+    margin: 20px;
+  }
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    height: 80px;
+    width: 100%;
+    padding: 0;
+    margin-top: 15px;
+  }
+
+  .navbar-menu {
+    display: grid;
+    grid-template-columns: auto;
+    margin: 15px;
+    width: 92%;
+    position: absolute;
+    top: -1000px;
+    opacity: 0;
+    background: #131313;
+    transition: all 0.5s ease;
+    height: 60vh;
+    z-index: -1;
+    border-radius: 8px;
+  }
+
+  .navbar-menu.active {
+    background-color: rgb(195, 195, 195);
+    top: 0%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 99;
+    height: 50vh;
+    font-size: 1.2rem;
+    color: #fff;
+  }
+
+  .navbar-toggle {
+    z-index: 999;
+    margin-right: 10px;
+  }
+  .navbar-toggle .bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3 ease-in-out;
+    background: white;
+  }
+  .navbar-item {
+    width: 100%;
+  }
+  .navbar-links {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+
+  #mobile-menu {
+    position: absolute;
+    top: 20%;
+    right: 6%;
+    transform: translate(5%, 20%);
+    display: block;
+  }
+
+  .navbar-toggle .bar {
+    display: block;
+    cursor: pointer;
+  }
+
+  #mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  #mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  #mobile-menu.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
 /* Hero Section CSS */
 
 .main {
@@ -106,6 +194,53 @@
 
 .main-content h2 {
   text-shadow: 2px 1px 1px rgba(0.5, 0.5, 0.5, 0.5);
+}
+
+/* Mobile Responsive */
+
+@media screen and (max-width: 765px) {
+  .main-container {
+    display: grid;
+    background-size: cover;
+    background-position: center;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-self: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .main-content h1 {
+    font-size: 100px;
+  }
+
+  .main-content h4 {
+    font-size: 1.3rem;
+  }
+
+  .main-content {
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 80px;
+  }
+
+  .main-button {
+    font-size: 0.8rem;
+    background-image: linear-gradient(to top, #1085fa 0%, #0066cc 100%);
+    padding: 16px 30px;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+  }
+
+  .scroll-button {
+    margin-bottom: 0;
+  }
 }
 
 .scroll-button {
@@ -155,14 +290,36 @@
   transition: 0.5s;
 }
 
+@media screen and (max-width: 765px) {
+  .about {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .profile {
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .profile img {
+    margin-left: 50px;
+  }
+
+  .about p {
+    width: 320px;
+    margin-top: 20px;
+  }
+}
 /* Services */
 
 .services-grid {
   grid-template-columns: 1fr 1fr 1fr;
   display: grid;
   column-gap: 8px;
-  row-gap: 25px;
-  padding: 100px;
+  row-gap: 80px;
+  padding: 80px;
   align-items: center;
   align-content: center;
   justify-content: center;
@@ -175,6 +332,15 @@
   align-items: center;
   align-content: center;
   justify-content: center;
+}
+
+@media screen and (max-width: 765px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    column-gap: 8px;
+    row-gap: 60px;
+    padding: 30px;
+  }
 }
 
 /* Nature Section */
