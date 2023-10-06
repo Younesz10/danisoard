@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, intial-scale=1.0" />
+    <title>Homepage</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <script
+      src="https://kit.fontawesome.com/eb9a0b4ec9.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,200;10..48,300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- navbar section -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="/" id="navbar-logo">
+          <img src="/images/danisoardLOGO.png" alt="Dani Soard" />
+        </a>
+        <div class="navbar-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar-menu">
+          <li class="navbar-item">
+            <a href="/index.html" class="navbar-links">Home</a>
+          </li>
+          <li class="navbar-item">
+            <a href="/about.html" class="navbar-links">About</a>
+          </li>
+          <li class="navbar-item">
+            <a href="/work.html" class="navbar-links">Work</a>
+          </li>
+          <li class="navbar-item">
+            <a href="/products.html" class="navbar-links">Products</a>
+          </li>
+          <li class="navbar-item">
+            <a href="/contact_page/contact.html" class="navbar-links"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="contact">
+      <div class="contact_form">
+        <form action="/submit_contact_form" method="post">
+          <div class="name">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required />
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required />
+          </div>
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" required />
+          <label for="email">Email:</label>
+          <input type="text" id="email" name="email" required />
+          <label for="streetAddress">Street Address:</label>
+          <input type="text" id="streetAddress" name="streetAddress" required />
+
+          <label for="city">City:</label>
+          <input type="text" id="city" name="city" required />
+
+          <label for="state">State:</label>
+          <input type="text" id="state" name="state" required />
+
+          <label for="postalCode">Postal Code:</label>
+          <input type="text" id="postalCode" name="postalCode" required />
+
+          <label for="country">Country:</label>
+          <input type="text" id="country" name="country" required />
+        </form>
+      </div>
+    </div>
+
+    <h1>Photography Session Scheduler</h1>
+
+    <label for="date">Select a Date:</label>
+    <input type="date" id="date" />
+
+    <label for="time">Select a Time:</label>
+    <select id="time">
+      <option value="9:00 AM - 10:00 AM">9:00 AM - 10:00 AM</option>
+      <option value="10:00 AM - 11:00 AM">10:00 AM - 11:00 AM</option>
+      <option value="11:00 AM - 12:00 PM">11:00 AM - 12:00 PM</option>
+      <!-- Add more time options as needed -->
+    </select>
+
+    <button onclick="bookSession()">Book Session</button>
+
+    <script>
+      // JavaScript code to handle date and time selection and booking
+      // This example uses a simple alert for booking confirmation.
+
+      function bookSession() {
+        const selectedDate = document.getElementById("date").value;
+        const selectedTime = document.getElementById("time").value;
+
+        if (!selectedDate || !selectedTime) {
+          alert("Please select both a date and a time.");
+          return;
+        }
+
+        // Here, you can implement your booking logic.
+        // You may want to store the selected date and time in a database or perform other actions as needed.
+
+        alert(`Booking for ${selectedDate} at ${selectedTime} confirmed.`);
+      }
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>
